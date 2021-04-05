@@ -2,7 +2,7 @@ package com.example.acronimeserviceapp.di
 
 import com.example.acronimeserviceapp.network.services.AcronimeMeaningService
 import com.example.acronimeserviceapp.network.services.AcronimeMeaningDataSource
-import com.example.acronimeserviceapp.repository.AcronimeRepository
+import com.example.acronimeserviceapp.repository.AcronimeMeaningRepository
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -37,5 +37,5 @@ object ApplicationModule {
     @Singleton
     @Provides
     fun provideAcronimeMeaningRepository(remoteDataSource: AcronimeMeaningDataSource) =
-        AcronimeRepository(remoteDataSource)
+        AcronimeMeaningRepository(remoteDataSource)
 }

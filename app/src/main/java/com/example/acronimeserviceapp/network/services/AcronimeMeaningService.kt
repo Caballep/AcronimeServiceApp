@@ -7,5 +7,5 @@ import retrofit2.http.Query
 
 interface AcronimeMeaningService {
     @GET("dictionary.py/{sf}")
-    suspend fun getAcronime(@Query("sf") sf: String): Response<AcronimeMeaningResponse>
+    suspend fun getAcronime(@Query("sf") sf: String): Response<List<AcronimeMeaningResponse>>
 }
